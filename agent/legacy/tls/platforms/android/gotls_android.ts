@@ -70,7 +70,7 @@ export class GoTLS_Android extends GoTLS {
 
             const hooker = new PatternBasedHooking(goTLSModule);
 
-            if (isPatternReplaced()){
+            if (false && isPatternReplaced()){
                 devlog("Hooking GoTLS functions by patterns from JSON file");
                 hooker.hook_DumpKeys(this.module_name,soName,patterns,(args: any[]) => {
                     devlog("Installed writeKeyLog() hooks using byte patterns.");
